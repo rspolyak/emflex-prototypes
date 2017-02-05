@@ -3614,14 +3614,6 @@ design rules under a new name.</description>
 <wire x1="47.625" y1="15.375" x2="46.843" y2="16.157" width="0.3048" layer="1"/>
 <wire x1="46.843" y1="16.157" x2="45.025" y2="16.157" width="0.3048" layer="1"/>
 </signal>
-<signal name="VIO">
-<contactref element="MPU6050" pad="8"/>
-<contactref element="C25" pad="1"/>
-<wire x1="40.9271" y1="41.73035" x2="40.9271" y2="42.6771" width="0.3048" layer="1"/>
-<wire x1="40.9271" y1="42.6771" x2="41.125" y2="42.875" width="0.3048" layer="1"/>
-<wire x1="41.125" y1="42.875" x2="44.83375" y2="42.875" width="0.3048" layer="1"/>
-<wire x1="44.83375" y1="42.875" x2="44.88375" y2="42.875" width="0.3048" layer="1"/>
-</signal>
 <signal name="VCC_GSM">
 <contactref element="IC2" pad="3"/>
 <contactref element="R6" pad="1"/>
@@ -3908,10 +3900,18 @@ design rules under a new name.</description>
 <via x="46.75" y="40.5" extent="1-16" drill="0.6"/>
 <wire x1="46.75" y1="40.5" x2="42.75" y2="44.5" width="0.3048" layer="16"/>
 <wire x1="42.75" y1="44.5" x2="41.75" y2="44.5" width="0.3048" layer="16"/>
-<wire x1="40.4225" y1="41.73035" x2="40.4225" y2="43.1725" width="0.3048" layer="1"/>
-<wire x1="40.4225" y1="43.1725" x2="41.75" y2="44.5" width="0.3048" layer="1"/>
 <wire x1="36.13" y1="21.4475" x2="36.13" y2="32.2975" width="0.3048" layer="1"/>
 <wire x1="36.13" y1="32.2975" x2="39.01" y2="35.1775" width="0.3048" layer="1"/>
+<contactref element="MPU6050" pad="8"/>
+<contactref element="C25" pad="1"/>
+<wire x1="40.9271" y1="42.8771" x2="40.4225" y2="42.8771" width="0.3048" layer="1"/>
+<wire x1="40.9271" y1="41.73035" x2="40.9271" y2="42.65" width="0.3048" layer="1"/>
+<wire x1="40.9271" y1="42.65" x2="40.9271" y2="42.8771" width="0.3048" layer="1"/>
+<wire x1="44.88375" y1="42.875" x2="44.88165" y2="42.8771" width="0.3048" layer="1"/>
+<wire x1="44.88165" y1="42.8771" x2="40.9271" y2="42.8771" width="0.3048" layer="1"/>
+<wire x1="41.75" y1="44.5" x2="40.9271" y2="43.6771" width="0.3048" layer="1"/>
+<wire x1="40.9271" y1="43.6771" x2="40.9271" y2="42.8771" width="0.3048" layer="1"/>
+<wire x1="40.4225" y1="41.73035" x2="40.4225" y2="42.8771" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$4">
 </signal>
