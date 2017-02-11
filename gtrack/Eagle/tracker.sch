@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -16135,15 +16135,6 @@ LilyPad 1206- DIO-09912&lt;br&gt;
 <label x="97.79" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="VIO" class="0">
-<segment>
-<wire x1="-13.97" y1="-80.01" x2="-3.81" y2="-80.01" width="0.1524" layer="91"/>
-<pinref part="MPU6050" gate="G$1" pin="VLOGIC"/>
-<pinref part="C25" gate="G$1" pin="1"/>
-<wire x1="-3.81" y1="-82.55" x2="-3.81" y2="-80.01" width="0.1524" layer="91"/>
-<label x="-11.43" y="-80.01" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="VCC_GSM" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="EN"/>
@@ -16376,8 +16367,17 @@ LilyPad 1206- DIO-09912&lt;br&gt;
 <wire x1="21.59" y1="-57.15" x2="21.59" y2="-77.47" width="0.1524" layer="91"/>
 <label x="-11.43" y="-77.47" size="1.778" layer="95"/>
 <pinref part="MPU6050" gate="G$1" pin="AD0"/>
-<wire x1="-13.97" y1="-77.47" x2="21.59" y2="-77.47" width="0.1524" layer="91"/>
+<wire x1="-13.97" y1="-77.47" x2="-3.81" y2="-77.47" width="0.1524" layer="91"/>
 <pinref part="P+4" gate="1" pin="V+"/>
+<wire x1="-3.81" y1="-77.47" x2="21.59" y2="-77.47" width="0.1524" layer="91"/>
+<wire x1="-13.97" y1="-80.01" x2="-3.81" y2="-80.01" width="0.1524" layer="91"/>
+<pinref part="MPU6050" gate="G$1" pin="VLOGIC"/>
+<pinref part="C25" gate="G$1" pin="1"/>
+<wire x1="-3.81" y1="-82.55" x2="-3.81" y2="-80.01" width="0.1524" layer="91"/>
+<label x="-11.43" y="-80.01" size="1.778" layer="95"/>
+<wire x1="-3.81" y1="-80.01" x2="-3.81" y2="-77.47" width="0.1524" layer="91"/>
+<junction x="-3.81" y="-80.01"/>
+<junction x="-3.81" y="-77.47"/>
 </segment>
 <segment>
 <pinref part="C24" gate="G$1" pin="1"/>
