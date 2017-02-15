@@ -14819,45 +14819,6 @@ LilyPad 1206- DIO-09912&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="wirepad">
-<description>&lt;b&gt;Single Pads&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="SMD1,27-2,54">
-<description>&lt;b&gt;SMD PAD&lt;/b&gt;</description>
-<smd name="1" x="0" y="0" dx="1.27" dy="2.54" layer="1"/>
-<text x="0" y="0" size="0.0254" layer="27">&gt;VALUE</text>
-<text x="-0.8" y="-2.4" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-</package>
-</packages>
-<symbols>
-<symbol name="PAD">
-<wire x1="-1.016" y1="1.016" x2="1.016" y2="-1.016" width="0.254" layer="94"/>
-<wire x1="-1.016" y1="-1.016" x2="1.016" y2="1.016" width="0.254" layer="94"/>
-<text x="-1.143" y="1.8542" size="1.778" layer="95">&gt;NAME</text>
-<text x="-1.143" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="P" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="SMD2" prefix="PAD" uservalue="yes">
-<description>&lt;b&gt;SMD PAD&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="PAD" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SMD1,27-2,54">
-<connects>
-<connect gate="1" pin="P" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="mmun221X">
 <packages>
 <package name="MMUN221X">
@@ -14936,6 +14897,64 @@ LilyPad 1206- DIO-09912&lt;br&gt;
 </gates>
 <devices>
 <device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="SRG">
+<description>Components Scott made</description>
+<packages>
+<package name="JST_B2B-PH_HEADER">
+<description>3-pin JST PH Shrouded Header &lt;br&gt;
+2.0mm pitch &lt;br&gt;
+P/N B3B-PH-K-S.  Mating plug PHR-3 &lt;br&gt;</description>
+<pad name="P2" x="-0.925" y="0.0475" drill="0.8" shape="long" rot="R90"/>
+<pad name="P1" x="1.075" y="0.0475" drill="0.8" shape="long" rot="R90"/>
+<wire x1="-2.875" y1="2.3825" x2="2.975" y2="2.3825" width="0.127" layer="21"/>
+<wire x1="2.975" y1="2.3825" x2="2.975" y2="-2.1175" width="0.127" layer="21"/>
+<wire x1="2.975" y1="-2.1175" x2="-2.875" y2="-2.1175" width="0.127" layer="21"/>
+<wire x1="-2.875" y1="-2.1175" x2="-2.875" y2="2.3825" width="0.127" layer="21"/>
+<text x="-2.925" y="2.6825" size="0.8128" layer="25" font="vector">&gt;NAME</text>
+<text x="0.875" y="-1.635" size="0.8128" layer="21" font="vector">1</text>
+<rectangle x1="-0.3175" y1="-2.06046875" x2="0.3175" y2="-1.42546875" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="JST_PHR-2">
+<description>2-pin JST PH Shrouded Header, top entry &lt;br&gt;
+P/N B2B-PH-K-S &lt;br&gt;
+Mating connector PHR-2 &lt;br&gt;</description>
+<pin name="1" x="-7.62" y="2.54" visible="pin" length="middle"/>
+<pin name="2" x="-7.62" y="0" visible="pin" length="middle"/>
+<text x="-5.08" y="5.842" size="1.27" layer="95" font="vector">&gt;NAME</text>
+<text x="-5.08" y="-4.318" size="1.27" layer="96" font="vector">&gt;VALUE</text>
+<wire x1="-5.08" y1="5.08" x2="2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="5.08" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<circle x="-2.54" y="2.54" radius="0.915809375" width="0.254" layer="94"/>
+<circle x="-2.54" y="0" radius="0.915809375" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="JST-PH_2-PIN_HEADER">
+<description>2-pin JST PH Shrouded Header, top entry &lt;br&gt;
+P/N B2B-PH-K-S &lt;br&gt;
+Mating connector PHR-2 &lt;br&gt;
+Mating cable assembly: Sparkfun &lt;a href="http://www.sparkfun.com/products/9914"&gt;PRT-09914&lt;/a&gt; &lt;br&gt;</description>
+<gates>
+<gate name="G$1" symbol="JST_PHR-2" x="0" y="-1.27"/>
+</gates>
+<devices>
+<device name="" package="JST_B2B-PH_HEADER">
+<connects>
+<connect gate="G$1" pin="1" pad="P1"/>
+<connect gate="G$1" pin="2" pad="P2"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -15260,8 +15279,6 @@ LilyPad 1206- DIO-09912&lt;br&gt;
 <attribute name="MPN" value=""/>
 <attribute name="OC_NEWARK" value="unknown"/>
 </part>
-<part name="BAT+" library="wirepad" deviceset="SMD2" device=""/>
-<part name="BAT-" library="wirepad" deviceset="SMD2" device=""/>
 <part name="GND1" library="SparkFun" deviceset="GND" device=""/>
 <part name="GSM_PWR" library="mmun221X" deviceset="MMUN221X" device=""/>
 <part name="GSM_RST" library="mmun221X" deviceset="MMUN221X" device=""/>
@@ -15276,6 +15293,7 @@ LilyPad 1206- DIO-09912&lt;br&gt;
 <part name="P+10" library="supply1" deviceset="V+" device=""/>
 <part name="P+7" library="supply1" deviceset="V+" device=""/>
 <part name="P+6" library="supply1" deviceset="V+" device=""/>
+<part name="BAT_JST" library="SRG" deviceset="JST-PH_2-PIN_HEADER" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15592,9 +15610,7 @@ LilyPad 1206- DIO-09912&lt;br&gt;
 <attribute name="MF" x="121.92" y="88.9" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="121.92" y="88.9" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="BAT+" gate="1" x="-116.84" y="109.22" rot="R270"/>
-<instance part="BAT-" gate="1" x="-127" y="109.22" rot="R270"/>
-<instance part="GND1" gate="1" x="-127" y="101.6"/>
+<instance part="GND1" gate="1" x="-124.46" y="102.108"/>
 <instance part="GSM_PWR" gate="G$1" x="-160.02" y="-73.66"/>
 <instance part="GSM_RST" gate="G$1" x="-106.68" y="-73.66"/>
 <instance part="GND7" gate="1" x="-101.6" y="-88.9"/>
@@ -15608,6 +15624,9 @@ LilyPad 1206- DIO-09912&lt;br&gt;
 <instance part="P+10" gate="1" x="35.56" y="114.3"/>
 <instance part="P+7" gate="1" x="135.89" y="127"/>
 <instance part="P+6" gate="1" x="-7.62" y="110.49"/>
+<instance part="BAT_JST" gate="G$1" x="-121.92" y="114.3" smashed="yes" rot="R90">
+<attribute name="NAME" x="-127.762" y="109.22" size="1.27" layer="95" font="vector" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -15866,11 +15885,6 @@ LilyPad 1206- DIO-09912&lt;br&gt;
 <wire x1="-86.36" y1="78.74" x2="-86.36" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="BAT-" gate="1" pin="P"/>
-<pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="-127" y1="106.68" x2="-127" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="GSM_RST" gate="G$1" pin="E"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="-101.6" y1="-86.36" x2="-101.6" y2="-83.82" width="0.1524" layer="91"/>
@@ -15879,6 +15893,11 @@ LilyPad 1206- DIO-09912&lt;br&gt;
 <pinref part="GND20" gate="1" pin="GND"/>
 <pinref part="GSM_PWR" gate="G$1" pin="E"/>
 <wire x1="-154.94" y1="-86.36" x2="-154.94" y2="-83.82" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="BAT_JST" gate="G$1" pin="1"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="-124.46" y1="106.68" x2="-124.46" y2="104.648" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SIM_DATA" class="0">
@@ -16070,8 +16089,9 @@ LilyPad 1206- DIO-09912&lt;br&gt;
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="-63.5" y1="91.44" x2="-63.5" y2="106.68" width="0.1524" layer="91"/>
 <junction x="-63.5" y="106.68"/>
-<pinref part="BAT+" gate="1" pin="P"/>
 <wire x1="-116.84" y1="96.52" x2="-116.84" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="BAT_JST" gate="G$1" pin="2"/>
+<wire x1="-116.84" y1="106.68" x2="-121.92" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="VBAT@0"/>
